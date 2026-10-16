@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,7 +10,9 @@
   <!-- Google Fonts: Inter & Gautami/Tiro Telugu compatible -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans+Telugu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans+Telugu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -58,36 +61,44 @@
     ::-webkit-scrollbar {
       width: 4px;
     }
+
     ::-webkit-scrollbar-track {
       background: #250207;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #b78103;
       border-radius: 4px;
     }
+
     body {
       touch-action: manipulation;
       user-select: none;
       -webkit-tap-highlight-color: transparent;
       background-color: #120104;
     }
+
     /* Gold Foil Text Gradient */
     .text-gold-gradient {
       background: linear-gradient(135deg, #ffe599 0%, #f5b041 50%, #d48b0c 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     .text-gold-subtle {
       background: linear-gradient(135deg, #fff2cc 0%, #ffd97d 70%, #d49a24 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     .border-gold-gradient {
       border-image: linear-gradient(to bottom right, #f5b041, #7c4a03, #f5b041) 1;
     }
+
     .sacred-shadow {
       box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(245, 176, 65, 0.15);
     }
+
     .chant-ring {
       stroke-dasharray: 440;
       stroke-dashoffset: 440;
@@ -95,61 +106,77 @@
     }
   </style>
 </head>
-<body class="text-stone-100 flex justify-center items-center min-h-screen p-0 sm:p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3a0810] via-[#1e0206] to-[#0c0003] antialiased">
+
+<body
+  class="text-stone-100 flex justify-center items-center min-h-screen p-0 sm:p-4 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3a0810] via-[#1e0206] to-[#0c0003] antialiased">
 
   <!-- Mobile Simulator Wrapper Frame -->
-  <div id="appContainer" class="relative w-full sm:max-w-md h-[100dvh] sm:h-[844px] bg-temple-deepWine sm:rounded-[38px] shadow-2xl overflow-hidden flex flex-col border border-temple-gold/30">
-    
+  <div id="appContainer"
+    class="relative w-full sm:max-w-md h-[100dvh] sm:h-[844px] bg-temple-deepWine sm:rounded-[38px] shadow-2xl overflow-hidden flex flex-col border border-temple-gold/30">
+
     <!-- Canvas for Celebratory Petals & Gold Dust Particles -->
     <canvas id="particleCanvas" class="absolute inset-0 pointer-events-none z-50 w-full h-full"></canvas>
 
     <!-- Divine Decorative Background Patterns -->
-    <div class="absolute inset-0 pointer-events-none opacity-5 bg-[radial-gradient(#f5b041_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div
+      class="absolute inset-0 pointer-events-none opacity-5 bg-[radial-gradient(#f5b041_1px,transparent_1px)] [background-size:16px_16px]">
+    </div>
     <div class="absolute -top-24 -left-24 w-60 h-60 bg-temple-gold/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-temple-saffron/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-temple-saffron/15 rounded-full blur-3xl pointer-events-none">
+    </div>
 
     <!-- TOP HEADER / APP BAR -->
-    <header class="relative z-20 px-4 pt-3 pb-2 bg-gradient-to-b from-[#2e040a] to-[#250207]/90 border-b border-temple-gold/20 backdrop-blur-md flex-shrink-0">
+    <header
+      class="relative z-20 px-4 pt-3 pb-2 bg-gradient-to-b from-[#2e040a] to-[#250207]/90 border-b border-temple-gold/20 backdrop-blur-md flex-shrink-0">
       <div class="flex items-center justify-between">
         <!-- Thiruman / Venkateswara Emblem Icon -->
         <div class="flex items-center space-x-2">
-          <div class="w-9 h-9 rounded-full bg-temple-maroon border border-temple-gold/40 flex items-center justify-center shadow-inner">
+          <div
+            class="w-9 h-9 rounded-full bg-temple-maroon border border-temple-gold/40 flex items-center justify-center shadow-inner">
             <!-- SVG Thiruman / Srichurnam -->
             <svg class="w-6 h-6 animate-glow-pulse" viewBox="0 0 60 70" fill="none">
               <!-- Shankha / Shanku and Namam -->
               <!-- White Outer U shape -->
-              <path d="M16 12 L16 38 C16 48 24 56 30 58 C36 56 44 48 44 38 L44 12" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+              <path d="M16 12 L16 38 C16 48 24 56 30 58 C36 56 44 48 44 38 L44 12" stroke="#FFFFFF" stroke-width="6"
+                stroke-linecap="round" />
               <!-- Red/Vermilion Center Srichoornam line -->
-              <path d="M30 6 L30 52" stroke="#E53E3E" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M30 6 L30 52" stroke="#E53E3E" stroke-width="4.5" stroke-linecap="round" />
               <!-- Yellow bindu bottom -->
-              <circle cx="30" cy="58" r="3" fill="#F5B041"/>
+              <circle cx="30" cy="58" r="3" fill="#F5B041" />
             </svg>
           </div>
           <div>
-            <h1 class="font-cinzel text-sm sm:text-base tracking-wider font-bold text-gold-gradient uppercase">Govinda Namalu</h1>
-            <p class="text-[10px] text-temple-goldLight/70 tracking-widest uppercase font-medium">తిరుమల శ్రీ వేంకటేశ్వర</p>
+            <h1 class="font-cinzel text-sm sm:text-base tracking-wider font-bold text-gold-gradient uppercase">Govinda
+              Namalu</h1>
+            <p class="text-[10px] text-temple-goldLight/70 tracking-widest uppercase font-medium">తిరుమల శ్రీ వేంకటేశ్వర
+            </p>
           </div>
         </div>
 
         <!-- Right Quick Controls: Sound chime toggle & All Namas Drawer button -->
         <div class="flex items-center space-x-2">
-          <!-- Digital Bell Chime Button -->
-          <button id="bellBtn" title="Ring Temple Pooja Bell" class="w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-transform shadow-md">
+          <!-- Digital Bell Chime Button (Mute/Unmute Toggle) -->
+          <button id="bellBtn" title="గంట శబ్దం ఆపు (Mute Bell Audio)" aria-label="Mute Bell Audio"
+            class="w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-transform shadow-md">
             <!-- Pooja Bell Icon -->
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2a2 2 0 0 0-2 2c0 .74.4 1.39 1 1.73V7h-1C6.24 7 3.5 9.74 3.5 13.5v2.83l-1.62 1.62A1 1 0 0 0 2.59 20H21.4a1 1 0 0 0 .71-1.71L20.5 16.33V13.5C20.5 9.74 17.76 7 14 7h-1V5.73c.6-.34 1-.99 1-1.73a2 2 0 0 0-2-2zm0 19a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z"/>
+              <path
+                d="M12 2a2 2 0 0 0-2 2c0 .74.4 1.39 1 1.73V7h-1C6.24 7 3.5 9.74 3.5 13.5v2.83l-1.62 1.62A1 1 0 0 0 2.59 20H21.4a1 1 0 0 0 .71-1.71L20.5 16.33V13.5C20.5 9.74 17.76 7 14 7h-1V5.73c.6-.34 1-.99 1-1.73a2 2 0 0 0-2-2zm0 19a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z" />
             </svg>
           </button>
 
           <!-- Conch / Shankham Audio Button -->
-          <button id="shankhBtn" title="Resound Sacred Shankham" class="w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-transform shadow-md">
+          <button id="shankhBtn" title="Resound Sacred Shankham"
+            class="w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-transform shadow-md">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16.93V16h-2v2.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16.93V16h-2v2.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z" />
             </svg>
           </button>
 
           <!-- Namas Directory Drawer Trigger -->
-          <button id="openDirectoryBtn" title="108 Namas Index" class="px-2.5 py-1 rounded-full bg-temple-gold/20 border border-temple-gold/50 text-temple-gold text-xs font-semibold flex items-center space-x-1 active:scale-95 transition-all">
+          <button id="openDirectoryBtn" title="108 Namas Index"
+            class="px-2.5 py-1 rounded-full bg-temple-gold/20 border border-temple-gold/50 text-temple-gold text-xs font-semibold flex items-center space-x-1 active:scale-95 transition-all">
             <span>సూచి</span>
             <span class="text-[10px] bg-temple-gold/30 px-1 rounded">108</span>
           </button>
@@ -160,10 +187,12 @@
       <div class="mt-2.5 flex items-center justify-between text-xs pt-2 border-t border-temple-gold/15">
         <!-- Chanting Mode Toggle: Japa Mala (108) vs Parayanam (Continuous) -->
         <div class="flex items-center bg-black/40 p-0.5 rounded-full border border-temple-gold/25">
-          <button id="modeJapa" class="px-2.5 py-1 rounded-full transition-all duration-200 font-medium text-[11px] bg-temple-gold text-temple-deepWine font-bold shadow-sm">
+          <button id="modeJapa"
+            class="px-2.5 py-1 rounded-full transition-all duration-200 font-medium text-[11px] bg-temple-gold text-temple-deepWine font-bold shadow-sm">
             జప మాల (108)
           </button>
-          <button id="modeParayanam" class="px-2.5 py-1 rounded-full transition-all duration-200 font-medium text-[11px] text-temple-goldLight/70 hover:text-white">
+          <button id="modeParayanam"
+            class="px-2.5 py-1 rounded-full transition-all duration-200 font-medium text-[11px] text-temple-goldLight/70 hover:text-white">
             పారాయణం
           </button>
         </div>
@@ -172,7 +201,8 @@
         <div class="flex items-center space-x-1 bg-black/40 px-2 py-0.5 rounded-full border border-temple-gold/25">
           <button id="langTelugu" class="text-[11px] font-bold text-temple-gold px-1.5 py-0.5 rounded">తెలుగు</button>
           <span class="text-stone-500">|</span>
-          <button id="langEnglish" class="text-[11px] text-stone-300 hover:text-white px-1.5 py-0.5 rounded">Eng</button>
+          <button id="langEnglish"
+            class="text-[11px] text-stone-300 hover:text-white px-1.5 py-0.5 rounded">Eng</button>
         </div>
       </div>
     </header>
@@ -185,7 +215,8 @@
         <!-- Current Nama Position -->
         <div class="bg-temple-maroon/70 border border-temple-gold/25 rounded-xl py-1.5 px-2 backdrop-blur-sm shadow">
           <p class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">నామ క్రమం</p>
-          <p class="font-cinzel text-base font-bold text-temple-gold"><span id="metricNamaIndex">1</span><span class="text-xs text-stone-400">/108</span></p>
+          <p class="font-cinzel text-base font-bold text-temple-gold"><span id="metricNamaIndex">1</span><span
+              class="text-xs text-stone-400">/108</span></p>
         </div>
         <!-- Mala Count / Round -->
         <div class="bg-temple-maroon/70 border border-temple-gold/25 rounded-xl py-1.5 px-2 backdrop-blur-sm shadow">
@@ -201,8 +232,9 @@
 
       <!-- CENTER HERO: THE SACRED NAMA DISPLAY CARD -->
       <div class="w-full my-auto flex flex-col items-center py-2">
-        <div id="namaCard" class="relative w-full bg-gradient-to-b from-[#440810] to-[#2f040a] border-2 border-temple-gold/40 rounded-3xl p-5 shadow-2xl text-center sacred-shadow transform transition-all duration-300">
-          
+        <div id="namaCard"
+          class="relative w-full bg-gradient-to-b from-[#440810] to-[#2f040a] border-2 border-temple-gold/40 rounded-3xl p-5 shadow-2xl text-center sacred-shadow transform transition-all duration-300">
+
           <!-- Ornate Top Lotus Motif -->
           <div class="flex items-center justify-center space-x-2 mb-2">
             <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-temple-gold/60"></span>
@@ -212,27 +244,32 @@
 
           <!-- Holy Telugu Nama -->
           <div id="displayTeluguBlock" class="min-h-[70px] flex items-center justify-center">
-            <h2 id="currentNamaTelugu" class="font-telugu font-bold text-2xl sm:text-3xl text-gold-gradient tracking-wide leading-relaxed py-1">
+            <h2 id="currentNamaTelugu"
+              class="font-telugu font-bold text-2xl sm:text-3xl text-gold-gradient tracking-wide leading-relaxed py-1">
               శ్రీ శ్రీనివాస గోవిందా
             </h2>
           </div>
 
           <!-- English Transliteration & Chant Call -->
           <div id="displayEnglishBlock" class="mt-1 min-h-[30px] flex items-center justify-center">
-            <p id="currentNamaEnglish" class="font-cinzel font-semibold text-base sm:text-lg text-amber-100 tracking-wider">
+            <p id="currentNamaEnglish"
+              class="font-cinzel font-semibold text-base sm:text-lg text-amber-100 tracking-wider">
               Śrī Śrīnivāsa Govindā
             </p>
           </div>
 
           <!-- Response Chanting Slogan (Govinda Hari Govinda) -->
-          <div class="mt-2 py-1 px-3 rounded-full bg-black/40 border border-temple-gold/30 inline-flex items-center space-x-1.5 mx-auto">
+          <div
+            class="mt-2 py-1 px-3 rounded-full bg-black/40 border border-temple-gold/30 inline-flex items-center space-x-1.5 mx-auto">
             <span class="w-1.5 h-1.5 rounded-full bg-temple-gold animate-ping"></span>
-            <span id="responseChorus" class="text-xs font-telugu text-temple-goldLight tracking-wide">గోవిందా హరి గోవిందా</span>
+            <span id="responseChorus" class="text-xs font-telugu text-temple-goldLight tracking-wide">గోవిందా హరి
+              గోవిందా</span>
           </div>
 
           <!-- Sacred Meaning / Essence -->
           <div class="mt-4 pt-3 border-t border-temple-gold/20 text-stone-200">
-            <p class="text-[11px] uppercase tracking-wider text-temple-goldLight/60 font-semibold mb-1">తాత్పర్యం / Meaning</p>
+            <p class="text-[11px] uppercase tracking-wider text-temple-goldLight/60 font-semibold mb-1">తాత్పర్యం /
+              Meaning</p>
             <p id="currentNamaMeaning" class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans px-2">
               The supreme abode where Goddess Lakshmi permanently resides in His heart; protector of all worlds.
             </p>
@@ -241,32 +278,41 @@
 
         <!-- Quick navigation controls (Previous / Auto Play / Next) -->
         <div class="flex items-center justify-between w-full max-w-[260px] mt-3">
-          <button id="prevNamaBtn" class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          <button id="prevNamaBtn"
+            class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
-          <button id="autoChantBtn" class="px-3 py-1 bg-temple-maroon border border-temple-gold/40 rounded-full text-xs text-temple-goldLight flex items-center space-x-1.5 active:scale-95 transition-all">
+          <button id="autoChantBtn"
+            class="px-3 py-1 bg-temple-maroon border border-temple-gold/40 rounded-full text-xs text-temple-goldLight flex items-center space-x-1.5 active:scale-95 transition-all">
             <span id="autoChantIcon">▶</span>
             <span id="autoChantText">స్వయంచాలక (Auto)</span>
           </button>
-          <button id="nextNamaBtn" class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <button id="nextNamaBtn"
+            class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       </div>
 
       <!-- BOTTOM INTERACTIVE JAPA MALA BEAD COUNTER & CHANT TRIGGER -->
       <div class="w-full flex flex-col items-center justify-center flex-shrink-0 pb-1">
-        
+
         <!-- Interactive Circular Touch Bead Counter -->
         <div class="relative flex items-center justify-center my-1">
           <!-- Circular Progress Ring (108 beads progression) -->
           <svg class="w-48 h-48 -rotate-90 transform" viewBox="0 0 160 160">
             <!-- Background circle track -->
-            <circle cx="80" cy="80" r="70" stroke="#3d0a11" stroke-width="8" fill="transparent"/>
+            <circle cx="80" cy="80" r="70" stroke="#3d0a11" stroke-width="8" fill="transparent" />
             <!-- 108 Bead Tick accents -->
-            <circle cx="80" cy="80" r="70" stroke="#681520" stroke-width="8" stroke-dasharray="2 6" fill="transparent"/>
+            <circle cx="80" cy="80" r="70" stroke="#681520" stroke-width="8" stroke-dasharray="2 6"
+              fill="transparent" />
             <!-- Active Golden Progress Ring -->
-            <circle id="malaProgressRing" cx="80" cy="80" r="70" stroke="url(#goldGradient)" stroke-width="8" fill="transparent" stroke-linecap="round" class="chant-ring"/>
+            <circle id="malaProgressRing" cx="80" cy="80" r="70" stroke="url(#goldGradient)" stroke-width="8"
+              fill="transparent" stroke-linecap="round" class="chant-ring" />
             <!-- Gradient definition -->
             <defs>
               <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -278,19 +324,23 @@
           </svg>
 
           <!-- Core Interactive Chant Button inside Ring -->
-          <button id="chantBeadBtn" class="absolute w-36 h-36 rounded-full bg-gradient-to-tr from-[#630d19] via-[#851624] to-[#40060e] border-4 border-temple-gold/70 shadow-2xl flex flex-col items-center justify-center text-center active:scale-95 transition-all duration-150 group overflow-hidden focus:outline-none">
+          <button id="chantBeadBtn"
+            class="absolute w-36 h-36 rounded-full bg-gradient-to-tr from-[#630d19] via-[#851624] to-[#40060e] border-4 border-temple-gold/70 shadow-2xl flex flex-col items-center justify-center text-center active:scale-95 transition-all duration-150 group overflow-hidden focus:outline-none">
             <!-- Ripple Wave Layer -->
-            <span id="chantRipple" class="absolute inset-0 bg-temple-gold/20 rounded-full scale-0 opacity-0 pointer-events-none transition-transform duration-500"></span>
-            
+            <span id="chantRipple"
+              class="absolute inset-0 bg-temple-gold/20 rounded-full scale-0 opacity-0 pointer-events-none transition-transform duration-500"></span>
+
             <!-- Divine Venkateswara Crown Motif -->
             <div class="text-temple-gold text-sm mb-1 group-active:translate-y-0.5 transition-transform">
               <svg class="w-7 h-7 mx-auto drop-shadow" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z" />
               </svg>
             </div>
-            
-            <span class="font-telugu text-lg sm:text-xl font-bold text-white drop-shadow tracking-wider group-active:scale-105">గోవిందా!</span>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-temple-goldLight mt-0.5">స్పర్శించి జపించండి</span>
+
+            <span
+              class="font-telugu text-lg sm:text-xl font-bold text-white drop-shadow tracking-wider group-active:scale-105">గోవిందా!</span>
+            <span class="text-[10px] font-cinzel uppercase tracking-widest text-temple-goldLight mt-0.5">స్పర్శించి
+              జపించండి</span>
             <span class="text-[11px] font-bold text-temple-gold mt-0.5 font-cinzel" id="beadCounterText">1 / 108</span>
           </button>
         </div>
@@ -303,9 +353,14 @@
     </main>
 
     <!-- FOOTER NAV / QUICK STATUS BAR -->
-    <footer class="relative z-20 px-4 py-2 bg-gradient-to-t from-[#1b0105] to-[#250207] border-t border-temple-gold/20 flex items-center justify-between text-xs text-stone-300 flex-shrink-0">
-      <button id="resetMalaBtn" class="flex items-center space-x-1 text-stone-400 hover:text-temple-gold transition-colors py-1">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+    <footer
+      class="relative z-20 px-4 py-2 bg-gradient-to-t from-[#1b0105] to-[#250207] border-t border-temple-gold/20 flex items-center justify-between text-xs text-stone-300 flex-shrink-0">
+      <button id="resetMalaBtn"
+        class="flex items-center space-x-1 text-stone-400 hover:text-temple-gold transition-colors py-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
         <span>మాల రీసెట్ (Reset)</span>
       </button>
 
@@ -316,8 +371,10 @@
     </footer>
 
     <!-- DRAWER: 108 GOVINDA NAMALU DIRECTORY -->
-    <div id="namasDrawer" class="absolute inset-0 z-50 bg-black/85 backdrop-blur-md flex flex-col justify-end translate-y-full transition-transform duration-300 ease-out">
-      <div class="bg-gradient-to-b from-[#3a060e] to-[#200206] border-t-2 border-temple-gold/40 rounded-t-3xl max-h-[85%] flex flex-col shadow-2xl">
+    <div id="namasDrawer"
+      class="absolute inset-0 z-50 bg-black/85 backdrop-blur-md flex flex-col justify-end translate-y-full transition-transform duration-300 ease-out">
+      <div
+        class="bg-gradient-to-b from-[#3a060e] to-[#200206] border-t-2 border-temple-gold/40 rounded-t-3xl max-h-[85%] flex flex-col shadow-2xl">
         <!-- Drawer Header -->
         <div class="p-4 border-b border-temple-gold/20 flex items-center justify-between">
           <div class="flex items-center space-x-2">
@@ -325,13 +382,16 @@
             <h3 class="font-cinzel font-bold text-temple-gold text-base">108 శ్రీ గోవింద నామావళి</h3>
           </div>
           <button id="closeDrawerBtn" class="p-1 rounded-full text-stone-400 hover:text-white bg-white/10">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
 
         <!-- Search input for quick jump -->
         <div class="px-4 py-2 border-b border-temple-gold/10">
-          <input id="searchNamaInput" type="text" placeholder="నామం శోధించండి (Search Nama / English)..." class="w-full bg-black/40 border border-temple-gold/30 rounded-xl px-3 py-1.5 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-temple-gold">
+          <input id="searchNamaInput" type="text" placeholder="నామం శోధించండి (Search Nama / English)..."
+            class="w-full bg-black/40 border border-temple-gold/30 rounded-xl px-3 py-1.5 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-temple-gold">
         </div>
 
         <!-- Scrollable Namas List -->
@@ -471,6 +531,7 @@
     let autoInterval = null;
     let currentLanguage = 'te'; // 'te' or 'en'
     let currentMode = 'japa';   // 'japa' or 'parayanam'
+    let isBellMuted = false;    // Bell audio mute state
 
     // Audio Synthesis Setup (Web Audio API) for Temple Bell & Shankham
     let audioCtx = null;
@@ -488,10 +549,11 @@
 
     // Synthesize Pooja Bell (Tirupati temple ghanti sound)
     function playTempleBell(pitch = 1200) {
+      if (isBellMuted) return; // Silent when bell audio is muted
       try {
         const ctx = getAudioContext();
         const now = ctx.currentTime;
-        
+
         // Fundamental & High harmonics for bright metal bell strike
         const freqs = [pitch, pitch * 1.52, pitch * 2.01, pitch * 2.9];
         const gains = [0.4, 0.25, 0.15, 0.08];
@@ -588,8 +650,8 @@
         this.rotSpeed = (Math.random() - 0.5) * 4;
         this.isPetal = isPetal;
         // Colors: Rose petal reds, Marigold saffron, or Golden sparkles
-        const colors = isPetal 
-          ? ['#e11d48', '#f43f5e', '#fbbf24', '#f97316'] 
+        const colors = isPetal
+          ? ['#e11d48', '#f43f5e', '#fbbf24', '#f97316']
           : ['#ffd700', '#f5b041', '#fff8cc'];
         this.color = colors[Math.floor(Math.random() * colors.length)];
         this.alpha = 1;
@@ -669,7 +731,7 @@
     // Update Display based on Current Index
     function renderCurrentNama() {
       const data = GOVINDA_NAMALU[currentIndex];
-      
+
       // Card subtle pop animation
       elNamaCard.classList.add('scale-[0.98]');
       setTimeout(() => elNamaCard.classList.remove('scale-[0.98]'), 150);
@@ -777,17 +839,15 @@
         ) {
           const row = document.createElement('div');
           const isCurrent = index === currentIndex;
-          row.className = `p-3 rounded-xl border transition-all flex items-center justify-between cursor-pointer ${
-            isCurrent 
-              ? 'bg-temple-gold/25 border-temple-gold text-white shadow-md' 
+          row.className = `p-3 rounded-xl border transition-all flex items-center justify-between cursor-pointer ${isCurrent
+              ? 'bg-temple-gold/25 border-temple-gold text-white shadow-md'
               : 'bg-black/30 border-temple-gold/15 text-stone-300 hover:bg-temple-gold/10'
-          }`;
-          
+            }`;
+
           row.innerHTML = `
             <div class="flex items-center space-x-3">
-              <span class="w-7 h-7 rounded-full flex items-center justify-center font-cinzel text-xs font-bold ${
-                isCurrent ? 'bg-temple-gold text-temple-deepWine' : 'bg-temple-maroon text-temple-gold'
-              }">
+              <span class="w-7 h-7 rounded-full flex items-center justify-center font-cinzel text-xs font-bold ${isCurrent ? 'bg-temple-gold text-temple-deepWine' : 'bg-temple-maroon text-temple-gold'
+            }">
                 ${item.id}
               </span>
               <div>
@@ -847,6 +907,68 @@
       langTeluguBtn.classList.add('text-stone-300');
     });
 
+    // Tactile Vibration Feedback for mobile devices
+    function triggerTactilePulse(heavy = false) {
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try {
+          navigator.vibrate(heavy ? [30, 50, 30] : 15);
+        } catch (e) {
+          // Ignore if vibration is not permitted or unsupported
+        }
+      }
+    }
+
+    // Bell Mute / Unmute Controller
+    const elBellBtn = document.getElementById('bellBtn');
+    const elShankhBtn = document.getElementById('shankhBtn');
+
+    function updateBellButton() {
+      if (!elBellBtn) return;
+      if (isBellMuted) {
+        elBellBtn.title = "గంట శబ్దం ఆన్ చేయి (Unmute Bell Audio)";
+        elBellBtn.setAttribute('aria-label', 'Unmute Bell Audio');
+        elBellBtn.className = "w-8 h-8 rounded-full bg-stone-900/90 border border-red-500/50 flex items-center justify-center text-stone-400 hover:text-stone-200 active:scale-90 transition-all shadow-md relative";
+        elBellBtn.innerHTML = `
+          <svg class="w-4 h-4 text-stone-400 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a2 2 0 0 0-2 2c0 .74.4 1.39 1 1.73V7h-1C6.24 7 3.5 9.74 3.5 13.5v2.83l-1.62 1.62A1 1 0 0 0 2.59 20H21.4a1 1 0 0 0 .71-1.71L20.5 16.33V13.5C20.5 9.74 17.76 7 14 7h-1V5.73c.6-.34 1-.99 1-1.73a2 2 0 0 0-2-2zm0 19a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z"/>
+          </svg>
+          <span class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <span class="w-5 h-[2px] bg-red-500 rotate-45 rounded-full shadow-sm"></span>
+          </span>
+        `;
+      } else {
+        elBellBtn.title = "గంట శబ్దం ఆపు (Mute Bell Audio)";
+        elBellBtn.setAttribute('aria-label', 'Mute Bell Audio');
+        elBellBtn.className = "w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-all shadow-md";
+        elBellBtn.innerHTML = `
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a2 2 0 0 0-2 2c0 .74.4 1.39 1 1.73V7h-1C6.24 7 3.5 9.74 3.5 13.5v2.83l-1.62 1.62A1 1 0 0 0 2.59 20H21.4a1 1 0 0 0 .71-1.71L20.5 16.33V13.5C20.5 9.74 17.76 7 14 7h-1V5.73c.6-.34 1-.99 1-1.73a2 2 0 0 0-2-2zm0 19a3 3 0 0 1-3-3h6a3 3 0 0 1-3 3z"/>
+          </svg>
+        `;
+      }
+    }
+
+    function toggleBellMute() {
+      isBellMuted = !isBellMuted;
+      updateBellButton();
+      triggerTactilePulse(false);
+      if (!isBellMuted) {
+        // Play gentle chime to confirm unmuted sound
+        playTempleBell(1250);
+      }
+    }
+
+    if (elBellBtn) {
+      elBellBtn.addEventListener('click', toggleBellMute);
+    }
+
+    if (elShankhBtn) {
+      elShankhBtn.addEventListener('click', () => {
+        playShankhamSound();
+        triggerPetalShower(15);
+      });
+    }
+
     // Reset Mala button
     document.getElementById('resetMalaBtn').addEventListener('click', () => {
       malaCounter = 1;
@@ -899,7 +1021,9 @@
     // Initialize display on load
     window.addEventListener('DOMContentLoaded', () => {
       renderCurrentNama();
+      updateBellButton();
     });
   </script>
 </body>
+
 </html>
