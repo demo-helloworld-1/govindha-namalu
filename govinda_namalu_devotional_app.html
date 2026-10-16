@@ -148,7 +148,8 @@
           <div>
             <h1 class="font-cinzel text-sm sm:text-base tracking-wider font-bold text-gold-gradient uppercase">Govinda
               Namalu</h1>
-            <p class="text-[10px] text-temple-goldLight/70 tracking-widest uppercase font-medium">తిరుమల శ్రీ వేంకటేశ్వర
+            <p id="appSubtitle" class="text-[10px] text-temple-goldLight/70 tracking-widest uppercase font-medium">
+              తిరుమల శ్రీ వేంకటేశ్వర
             </p>
           </div>
         </div>
@@ -166,7 +167,7 @@
           </button>
 
           <!-- Conch / Shankham Audio Button -->
-          <button id="shankhBtn" title="Resound Sacred Shankham"
+          <button id="shankhBtn" title="శంఖ ధ్వని (Resound Shankham)"
             class="w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-transform shadow-md">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -177,7 +178,7 @@
           <!-- Namas Directory Drawer Trigger -->
           <button id="openDirectoryBtn" title="108 Namas Index"
             class="px-2.5 py-1 rounded-full bg-temple-gold/20 border border-temple-gold/50 text-temple-gold text-xs font-semibold flex items-center space-x-1 active:scale-95 transition-all">
-            <span>సూచి</span>
+            <span id="directoryBtnText">సూచి</span>
             <span class="text-[10px] bg-temple-gold/30 px-1 rounded">108</span>
           </button>
         </div>
@@ -199,10 +200,11 @@
 
         <!-- Script / Transliteration Toggle -->
         <div class="flex items-center space-x-1 bg-black/40 px-2 py-0.5 rounded-full border border-temple-gold/25">
-          <button id="langTelugu" class="text-[11px] font-bold text-temple-gold px-1.5 py-0.5 rounded">తెలుగు</button>
+          <button id="langTelugu"
+            class="text-[11px] font-bold text-temple-gold bg-temple-gold/20 px-2 py-0.5 rounded transition-all">తెలుగు</button>
           <span class="text-stone-500">|</span>
           <button id="langEnglish"
-            class="text-[11px] text-stone-300 hover:text-white px-1.5 py-0.5 rounded">Eng</button>
+            class="text-[11px] text-stone-300 hover:text-white px-2 py-0.5 rounded transition-all">Eng</button>
         </div>
       </div>
     </header>
@@ -214,18 +216,21 @@
       <div class="w-full grid grid-cols-3 gap-2 flex-shrink-0 text-center">
         <!-- Current Nama Position -->
         <div class="bg-temple-maroon/70 border border-temple-gold/25 rounded-xl py-1.5 px-2 backdrop-blur-sm shadow">
-          <p class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">నామ క్రమం</p>
+          <p id="metricNamaLabel" class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">నామ
+            క్రమం</p>
           <p class="font-cinzel text-base font-bold text-temple-gold"><span id="metricNamaIndex">1</span><span
               class="text-xs text-stone-400">/108</span></p>
         </div>
         <!-- Mala Count / Round -->
         <div class="bg-temple-maroon/70 border border-temple-gold/25 rounded-xl py-1.5 px-2 backdrop-blur-sm shadow">
-          <p class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">పూర్తి మాలలు</p>
+          <p id="metricMalaLabel" class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">
+            పూర్తి మాలలు</p>
           <p class="font-cinzel text-base font-bold text-temple-gold" id="metricMalaRounds">0</p>
         </div>
         <!-- Total Chants Recorded -->
         <div class="bg-temple-maroon/70 border border-temple-gold/25 rounded-xl py-1.5 px-2 backdrop-blur-sm shadow">
-          <p class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">మొత్తం జపం</p>
+          <p id="metricTotalLabel" class="text-[10px] uppercase tracking-wider text-temple-goldLight/70 font-medium">
+            మొత్తం జపం</p>
           <p class="font-cinzel text-base font-bold text-temple-gold" id="metricTotalChants">0</p>
         </div>
       </div>
@@ -246,7 +251,7 @@
           <div id="displayTeluguBlock" class="min-h-[70px] flex items-center justify-center">
             <h2 id="currentNamaTelugu"
               class="font-telugu font-bold text-2xl sm:text-3xl text-gold-gradient tracking-wide leading-relaxed py-1">
-              శ్రీ శ్రీనివాస గోవిందా
+              శ్రీనివాసా గోవిందా
             </h2>
           </div>
 
@@ -254,7 +259,7 @@
           <div id="displayEnglishBlock" class="mt-1 min-h-[30px] flex items-center justify-center">
             <p id="currentNamaEnglish"
               class="font-cinzel font-semibold text-base sm:text-lg text-amber-100 tracking-wider">
-              Śrī Śrīnivāsa Govindā
+              Śrīnivāsā Govindā
             </p>
           </div>
 
@@ -268,17 +273,18 @@
 
           <!-- Sacred Meaning / Essence -->
           <div class="mt-4 pt-3 border-t border-temple-gold/20 text-stone-200">
-            <p class="text-[11px] uppercase tracking-wider text-temple-goldLight/60 font-semibold mb-1">తాత్పర్యం /
+            <p id="labelMeaning"
+              class="text-[11px] uppercase tracking-wider text-temple-goldLight/60 font-semibold mb-1">తాత్పర్యం /
               Meaning</p>
             <p id="currentNamaMeaning" class="text-xs sm:text-sm text-stone-300 leading-relaxed font-sans px-2">
-              The supreme abode where Goddess Lakshmi permanently resides in His heart; protector of all worlds.
+              Abode of Goddess Sri Lakshmi, bestower of eternal spiritual and material auspiciousness.
             </p>
           </div>
         </div>
 
         <!-- Quick navigation controls (Previous / Auto Play / Next) -->
         <div class="flex items-center justify-between w-full max-w-[260px] mt-3">
-          <button id="prevNamaBtn"
+          <button id="prevNamaBtn" title="మునుపటి నామం (Previous)"
             class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -289,7 +295,7 @@
             <span id="autoChantIcon">▶</span>
             <span id="autoChantText">స్వయంచాలక (Auto)</span>
           </button>
-          <button id="nextNamaBtn"
+          <button id="nextNamaBtn" title="తరువాతి నామం (Next)"
             class="p-2 text-temple-gold/70 hover:text-white active:scale-90 transition-transform">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -337,15 +343,16 @@
               </svg>
             </div>
 
-            <span
+            <span id="chantBeadMainText"
               class="font-telugu text-lg sm:text-xl font-bold text-white drop-shadow tracking-wider group-active:scale-105">గోవిందా!</span>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-temple-goldLight mt-0.5">స్పర్శించి
+            <span id="chantBeadSubText"
+              class="text-[10px] font-cinzel uppercase tracking-widest text-temple-goldLight mt-0.5">స్పర్శించి
               జపించండి</span>
             <span class="text-[11px] font-bold text-temple-gold mt-0.5 font-cinzel" id="beadCounterText">1 / 108</span>
           </button>
         </div>
 
-        <p class="text-[11px] text-stone-400 mt-1 flex items-center space-x-1">
+        <p id="chantHintText" class="text-[11px] text-stone-400 mt-1 flex items-center space-x-1">
           <span>🔔 ట్యాప్ చేసి గోవింద నామం పఠించండి</span>
         </p>
       </div>
@@ -354,20 +361,15 @@
 
     <!-- FOOTER NAV / QUICK STATUS BAR -->
     <footer
-      class="relative z-20 px-4 py-2 bg-gradient-to-t from-[#1b0105] to-[#250207] border-t border-temple-gold/20 flex items-center justify-between text-xs text-stone-300 flex-shrink-0">
+      class="relative z-20 px-4 py-2 bg-gradient-to-t from-[#1b0105] to-[#250207] border-t border-temple-gold/20 flex items-center justify-center text-xs text-stone-300 flex-shrink-0">
       <button id="resetMalaBtn"
         class="flex items-center space-x-1 text-stone-400 hover:text-temple-gold transition-colors py-1">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
         </svg>
-        <span>మాల రీసెట్ (Reset)</span>
+        <span id="resetMalaText">మాల రీసెట్ (Reset)</span>
       </button>
-
-      <div class="flex items-center space-x-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span class="text-[11px] text-stone-300 font-cinzel">తిరుపతి లడ్డు ప్రసాదం ధ్యానం</span>
-      </div>
     </footer>
 
     <!-- DRAWER: 108 GOVINDA NAMALU DIRECTORY -->
@@ -379,7 +381,7 @@
         <div class="p-4 border-b border-temple-gold/20 flex items-center justify-between">
           <div class="flex items-center space-x-2">
             <span class="text-temple-gold text-lg">🪷</span>
-            <h3 class="font-cinzel font-bold text-temple-gold text-base">108 శ్రీ గోవింద నామావళి</h3>
+            <h3 id="drawerTitle" class="font-cinzel font-bold text-temple-gold text-base">108 శ్రీ గోవింద నామావళి</h3>
           </div>
           <button id="closeDrawerBtn" class="p-1 rounded-full text-stone-400 hover:text-white bg-white/10">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -401,7 +403,8 @@
 
         <!-- Drawer Footer -->
         <div class="p-3 border-t border-temple-gold/20 text-center bg-black/30">
-          <p class="text-[11px] text-temple-goldLight/70 font-cinzel">శ్రీ వేంకటేశ్వర చరణౌ శరణం ప్రపద్యే</p>
+          <p id="drawerFooterText" class="text-[11px] text-temple-goldLight/70 font-cinzel">శ్రీ వేంకటేశ్వర చరణౌ శరణం
+            ప్రపద్యే</p>
         </div>
       </div>
     </div>
@@ -410,116 +413,116 @@
 
   <!-- APPLICATION SCRIPTS & SOUND SYNTHESIS -->
   <script>
-    // 108 Sacred Govinda Namalu Dataset with Telugu, English transliteration, and spiritual meanings
+// 108 Sacred Govinda Namalu Dataset with Telugu, English transliteration, and spiritual meanings
     const GOVINDA_NAMALU = [
-      { id: 1, telugu: "శ్రీ శ్రీనివాస గోవిందా", english: "Śrī Śrīnivāsa Govindā", meaning: "Abode of Goddess Sri Lakshmi, bestower of eternal spiritual prosperity." },
-      { id: 2, telugu: "శ్రీ వేంకటేశా గోవిందా", english: "Śrī Veṅkaṭēśā Govindā", meaning: "The supreme destroyer of all accumulated sins and karma." },
-      { id: 3, telugu: "భక్తవత్సల గోవిందా", english: "Bhakta Vatsala Govindā", meaning: "He who showers limitless motherly affection upon His devotees." },
-      { id: 4, telugu: "భాగవతప్రియ గోవిందా", english: "Bhāgavata Priya Govindā", meaning: "He who holds the noble devotees closest to His divine heart." },
-      { id: 5, telugu: "నిత్యకళ్యాణ గోవిందా", english: "Nitya Kalyāṇa Govindā", meaning: "The eternal embodiment of ceaseless auspiciousness and joy." },
-      { id: 6, telugu: "ఆనందనిలయ గోవిందా", english: "Ānanda Nilaya Govindā", meaning: "The supreme golden sanctum and boundless reservoir of bliss." },
-      { id: 7, telugu: "తిరుమలవాస గోవిందా", english: "Tirumala Vāsa Govindā", meaning: "He who graciously resides upon the holy Seven Hills of Tirumala." },
-      { id: 8, telugu: "శేషాద్రినిలయ గోవిందా", english: "Śēṣādri Nilaya Govindā", meaning: "Lord who rests upon the Sheshadri hill serpent manifestation." },
-      { id: 9, telugu: "గరుడవాహన గోవిందా", english: "Garuḍa Vāhana Govindā", meaning: "The magnificent Lord mounted proudly on the winged Garuda." },
-      { id: 10, telugu: "ధనుర్ధర గోవిందా", english: "Dhanurdhara Govindā", meaning: "The invincible wielder of the divine Sharnga bow." },
-      { id: 11, telugu: "శంఖచక్రధర గోవిందా", english: "Śaṅkha Cakra Dhara Govindā", meaning: "Bearer of the sacred Panchajanya Conch and Sudarshana Chakra." },
-      { id: 12, telugu: "పీతాంబరధర గోవిందా", english: "Pītāmbara Dhara Govindā", meaning: "The Lord adorned in luminous golden yellow silk garments." },
-      { id: 13, telugu: "తులసీవనప్రియ గోవిందా", english: "Tulasī Vana Priya Govindā", meaning: "He who is profoundly delighted by sacred fragrant Tulasi leaves." },
-      { id: 14, telugu: "సుందరరూప గోవిందా", english: "Sundara Rūpa Govindā", meaning: "The divine charmer whose beauty outshines countless cupids." },
-      { id: 15, telugu: "రామకృష్ణ గోవిందా", english: "Rāma Kṛṣṇa Govindā", meaning: "The one Supreme Being who appeared as virtuous Rama and sweet Krishna." },
-      { id: 16, telugu: "గోకులనందన గోవిందా", english: "Gōkula Nandana Govindā", meaning: "The delight of Gokula and the eternal protector of living beings." },
-      { id: 17, telugu: "నవనీతచోర గోవిందా", english: "Navanīta Cōra Govindā", meaning: "He who steals away the pure butter-like hearts of His surrenderers." },
-      { id: 18, telugu: "దామోదర గోవిందా", english: "Dāmōdara Govindā", meaning: "Bound by Mother Yashoda's loving cord around His waist." },
-      { id: 19, telugu: "వేణుగానలోల గోవిందా", english: "Vēṇu Gāna Lōla Govindā", meaning: "Enchanter of all creation through His enchanting flute melodies." },
-      { id: 20, telugu: "కాళింగమర్దన గోవిందా", english: "Kāliṅga Mardana Govindā", meaning: "Subduer of the venomous multi-hooded serpent Kalinga." },
-      { id: 21, telugu: "గోవర్ధనోద్ధార గోవిందా", english: "Gōvardhanōddhāra Govindā", meaning: "Lifter of Mount Govardhana to shelter His devotees from rain." },
-      { id: 22, telugu: "బలరామానుజ గోవిందా", english: "Balarāmānuja Govindā", meaning: "The loving younger brother of mighty Balarama." },
-      { id: 23, telugu: "మధుసూదన గోవిందా", english: "Madhusūdana Govindā", meaning: "The divine conqueror of the inner demon of ego and delusion." },
-      { id: 24, telugu: "కేశవ గోవిందా", english: "Kēśava Govindā", meaning: "Lord with radiant locks of hair, ruler of Brahma and Shiva." },
-      { id: 25, telugu: "నారాయణ గోవిందా", english: "Nārāyaṇa Govindā", meaning: "The final resting shelter and sanctuary of all cosmic souls." },
-      { id: 26, telugu: "మాధవ గోవిందా", english: "Mādhava Govindā", meaning: "The eternal beloved consort of Mother Mahalakshmi." },
-      { id: 27, telugu: "వామనావతార గోవిందా", english: "Vāmanāvatāra Govindā", meaning: "He who assumed the dwarf Brahmin form to bless King Bali." },
-      { id: 28, telugu: "త్రివిక్రమ గోవిందా", english: "Trivikrama Govindā", meaning: "He who measured all three cosmic realms in three sublime strides." },
-      { id: 29, telugu: "శ్రీపద్మనాభ గోవిందా", english: "Śrī Padmanābha Govindā", meaning: "From whose sacred navel sprouts the cosmic lotus of creation." },
-      { id: 30, telugu: "పద్మావతీప్రియ గోవిందా", english: "Padmāvatī Priya Govindā", meaning: "The cherished divine husband of Goddess Padmavathi Devi." },
-      { id: 31, telugu: "వజ్రకవచధర గోవిందా", english: "Vajra Kavaca Dhara Govindā", meaning: "Shielded in an impenetrable diamond armor protecting humanity." },
-      { id: 32, telugu: "సహస్రనామ గోవిందా", english: "Sahasranāma Govindā", meaning: "Lord glorified through a thousand transcendental names and virtues." },
-      { id: 33, telugu: "ఆదివరాహ గోవిందా", english: "Ādivarāha Govindā", meaning: "He who rescued Mother Earth from the cosmic depths." },
-      { id: 34, telugu: "నరసింహరూప గోవిందా", english: "Narasiṁha Rūpa Govindā", meaning: "Protector who manifested instantly to honor child Prahlada's faith." },
-      { id: 35, telugu: "కలియుగవరద గోవిందా", english: "Kaliyuga Varada Govindā", meaning: "The wish-fulfilling deity visible and accessible in this Kaliyuga age." },
-      { id: 36, telugu: "ఆపద్బాంధవ గోవిందా", english: "Āpadbāndhava Govindā", meaning: "The supreme relative and savior in moments of acute distress." },
-      { id: 37, telugu: "అనాథరక్షక గోవిందా", english: "Anātha Rakṣaka Govindā", meaning: "The timeless guardian of the helpless, destitute, and surrendered." },
-      { id: 38, telugu: "దయానిధే గోవిందా", english: "Dayānidhē Govindā", meaning: "The boundless oceanic treasure-trove of unconditional mercy." },
-      { id: 39, telugu: "కృపాసాగర గోవిందా", english: "Kṛpāsāgara Govindā", meaning: "The unfathomable ocean of boundless compassion." },
-      { id: 40, telugu: "పరమపురుష గోవిందా", english: "Parama Puruṣa Govindā", meaning: "The highest supreme soul transcendent beyond material nature." },
-      { id: 41, telugu: "పురుషోత్తమ గోవిందా", english: "Puruṣōttama Govindā", meaning: "The supreme being described in the Bhagavad Gita above all." },
-      { id: 42, telugu: "జగద్రక్షక గోవిందా", english: "Jagadrakṣaka Govindā", meaning: "The eternal preserver and sustainer of the entire universe." },
-      { id: 43, telugu: "ముకుంద గోవిందా", english: "Mukunda Govindā", meaning: "The divine grantor of supreme liberation and freedom from birth." },
-      { id: 44, telugu: "మురహరి గోవిందా", english: "Murahari Govindā", meaning: "The vanquisher of the demon Mura and dispeller of ignorance." },
-      { id: 45, telugu: "వసుదేవనందన గోవిందా", english: "Vasudēva Nandana Govindā", meaning: "The sweet jewel child of King Vasudeva and Devaki." },
-      { id: 46, telugu: "రుక్మిణీలోల గోవిందా", english: "Rukmiṇī Lōla Govindā", meaning: "The divine joy and consort of Queen Rukmini." },
-      { id: 47, telugu: "సత్యభామాప్రియ గోవిందా", english: "Satyabhāmā Priya Govindā", meaning: "The beloved of Princess Satyabhama who brought the Parijata tree." },
-      { id: 48, telugu: "పాండవపక్ష గోవిందా", english: "Pāṇḍava Pakṣa Govindā", meaning: "He who stood as the unwavering pillar of Dharma for the Pandavas." },
-      { id: 49, telugu: "గీతాచార్య గోవిందా", english: "Gītācārya Govindā", meaning: "The supreme cosmic teacher who sang the immortal Bhagavad Gita." },
-      { id: 50, telugu: "విశ్వరూపధర గోవిందా", english: "Viśvarūpa Dhara Govindā", meaning: "He who revealed His awe-inspiring all-encompassing cosmic form." },
-      { id: 51, telugu: "కౌస్తుభధారి గోవిందా", english: "Kaustubhadhārī Govindā", meaning: "Whose chest glows with the peerless Kaustubha jewel." },
-      { id: 52, telugu: "వనమాలాధర గోవిందా", english: "Vanamālā Dhara Govindā", meaning: "Adorned with the fragrant cosmic woodland garland Vanamala." },
-      { id: 53, telugu: "చందనచర్చిత గోవిందా", english: "Candana Carcita Govindā", meaning: "Anointed gracefully with fragrant cooling sandalwood paste." },
-      { id: 54, telugu: "కర్పూరప్రియ గోవిందా", english: "Karpūra Priya Govindā", meaning: "Delighted by glowing camphor offerings during sacred Arati." },
-      { id: 55, telugu: "కస్తూరితిలక గోవిందా", english: "Kastūrī Tilaka Govindā", meaning: "Whose forehead shines brilliantly with the sacred musk mark." },
-      { id: 56, telugu: "రత్నకిరీట గోవిందా", english: "Ratna Kirīṭa Govindā", meaning: "Crowned with the dazzling jewel-inlaid crown of supremacy." },
-      { id: 57, telugu: "కుండలధారి గోవిందా", english: "Kuṇḍaladhārī Govindā", meaning: "Whose ears glisten with celestial fish-shaped earrings." },
-      { id: 58, telugu: "శ్రీవత్సలాంఛన గోవిందా", english: "Śrīvatsa Lāñchana Govindā", meaning: "Bearing the sacred sign of Sri Vatsa upon His chest." },
-      { id: 59, telugu: "మణిమయహార గోవిందా", english: "Maṇimaya Hāra Govindā", meaning: "Bejeweled with shimmering necklaces of rare heavenly gems." },
-      { id: 60, telugu: "కనకాంబరధర గోవిందా", english: "Kanakāmbara Dhara Govindā", meaning: "Draped in radiant silks woven with threads of molten gold." },
-      { id: 61, telugu: "స్వామిపుష్కరిణీతీర గోవిందా", english: "Svāmī Puṣkariṇī Tīra Govindā", meaning: "Lord who sports along the sacred holy lake Swami Pushkarini." },
-      { id: 62, telugu: "పాపవినాశన గోవిందా", english: "Pāpa Vināśana Govindā", meaning: "The purifier whose holy waters and name erase all blemishes." },
-      { id: 63, telugu: "ఆకాశగంగా గోవిందా", english: "Ākāśagaṅgā Govindā", meaning: "Anointed daily by the celestial waterfall Akashaganga." },
-      { id: 64, telugu: "కపిలతీర్థ గోవిందా", english: "Kapilatīrtha Govindā", meaning: "Revered at the sacred confluence of Kapila Muni's penance." },
-      { id: 65, telugu: "జాబాలితీర్థ గోవిందా", english: "Jābālītīrtha Govindā", meaning: "Honored at the sacred hermitage of sage Jabali on Tirumala." },
-      { id: 66, telugu: "పాండవతీర్థ గోవిందా", english: "Pāṇḍavatīrtha Govindā", meaning: "Lord of the mountain spring sanctified by the Pandava brothers." },
-      { id: 67, telugu: "వరదరాజ గోవిందా", english: "Varadarāja Govindā", meaning: "The king of all benefactors granting boons instantly." },
-      { id: 68, telugu: "రంగనాథ గోవిందా", english: "Raṅganātha Govindā", meaning: "The sleeping lord orchestrating the cosmic play of reality." },
-      { id: 69, telugu: "జగన్నాథ గోవిందా", english: "Jagannātha Govindā", meaning: "The sovereign Lord of the whole universe loved by all." },
-      { id: 70, telugu: "బదరీనారాయణ గోవిందా", english: "Badarīnārāyaṇa Govindā", meaning: "He who meditates in Himalayas for the welfare of mankind." },
-      { id: 71, telugu: "ద్వారకానాథ గోవిందా", english: "Dvārakānātha Govindā", meaning: "The benevolent ruler of the golden island city Dwaraka." },
-      { id: 72, telugu: "మథురానాథ గోవిందా", english: "Mathurānātha Govindā", meaning: "The prince born in Mathura who liberated righteous souls." },
-      { id: 73, telugu: "అయోధ్యావాస గోవిందా", english: "Ayōdhyāvāsa Govindā", meaning: "The righteous king who made Ayodhya the bastion of truth." },
-      { id: 74, telugu: "సీతావల్లభ గోవిందా", english: "Sītāvallabha Govindā", meaning: "The devoted beloved spouse of virtuous Mother Janaki." },
-      { id: 75, telugu: "లక్ష్మణాగ్రజ గోవిందా", english: "Lakṣmaṇāgraja Govindā", meaning: "The revered elder brother cherished unconditionally by Lakshmana." },
-      { id: 76, telugu: "భరతాగ్రజ గోవిందా", english: "Bharata Agraja Govindā", meaning: "The noble brother whose sandals ruled the kingdom under Bharata." },
-      { id: 77, telugu: "ఆంజనేయప్రియ గోవిందా", english: "Āñjanēyapriya Govindā", meaning: "The life-breath and eternal refuge of mighty Hanuman." },
-      { id: 78, telugu: "సుగ్రీవరక్షక గోవిందా", english: "Sugrīva Rakṣaka Govindā", meaning: "He who restored honor and kingdom to grateful Sugriva." },
-      { id: 79, telugu: "విభీషణశరణ్య గోవిందా", english: "Vibhīṣaṇa Śaraṇya Govindā", meaning: "He who accepted Vibhishana fearlessly into His eternal shelter." },
-      { id: 80, telugu: "సేతుబంధన గోవిందా", english: "Sētubandhana Govindā", meaning: "The architect of the miraculous ocean bridge to Lanka." },
-      { id: 81, telugu: "రావణమర్దన గోవిందా", english: "Rāvaṇa Mardana Govindā", meaning: "The destroyer of ten-headed pride and tyrant Ravana." },
-      { id: 82, telugu: "ధర్మసంస్థాపక గోవిందా", english: "Dharma Saṁsthāpaka Govindā", meaning: "He who incarnates age after age to establish eternal truth." },
-      { id: 83, telugu: "యదుకులభూషణ గోవిందా", english: "Yadukula Bhūṣaṇa Govindā", meaning: "The crest-jewel ornament of the noble Yadava dynasty." },
-      { id: 84, telugu: "సుదర్శనధారి గోవిందా", english: "Sudarśana Dhāri Govindā", meaning: "Wielder of the invincible wheel of time and protection." },
-      { id: 85, telugu: "పాంచజన్యధర గోవిందా", english: "Pāñcajanyadhara Govindā", meaning: "Whose resounding conch strikes fear into the hearts of evil." },
-      { id: 86, telugu: "గదాధర గోవిందా", english: "Gadādhara Govindā", meaning: "Bearer of the heavy mace Kaumodaki shattering ignorance." },
-      { id: 87, telugu: "నందకధర గోవిందా", english: "Nandakadhara Govindā", meaning: "Wielder of the sword Nandaka cutting cords of worldly bondage." },
-      { id: 88, telugu: "శార్ఙ్గధనుర్ధర గోవిందా", english: "Śārṅgadhanurdhara Govindā", meaning: "Master of the celestial bow releasing arrows of virtue." },
-      { id: 89, telugu: "యోగనిద్రా గోవిందా", english: "Yōganidrā Govindā", meaning: "Reclining in cosmic conscious sleep upon serpent Ananta." },
-      { id: 90, telugu: "క్షీరాబ్ధిశయన గోవిందా", english: "Kṣīrābdhi Śayana Govindā", meaning: "Dweller upon the serene celestial Ocean of Milk." },
-      { id: 91, telugu: "అనంతశయన గోవిందా", english: "Ananta Śayana Govindā", meaning: "Resting serenely upon the coils of thousand-headed Adisesha." },
-      { id: 92, telugu: "వేదవేద్య గోవిందా", english: "Vēdavēdya Govindā", meaning: "The ultimate supreme truth revealed by all four Vedas." },
-      { id: 93, telugu: "యజ్ఞపురుష గోవిందా", english: "Yajñapuruṣa Govindā", meaning: "The receiver and ultimate lord of all sacred oblations." },
-      { id: 94, telugu: "మోక్షదాయక గోవిందా", english: "Mōkṣadāyaka Govindā", meaning: "Bestower of absolute enlightenment and final release." },
-      { id: 95, telugu: "బ్రహ్మాదివందిత గోవిందా", english: "Brahmādivandita Govindā", meaning: "Worshipped with folded hands by Brahma and the demigods." },
-      { id: 96, telugu: "రుద్రరూప గోవిందా", english: "Rudrarūpa Govindā", meaning: "The underlying oneness uniting Hari and Hara." },
-      { id: 97, telugu: "సర్వేశ్వర గోవిందా", english: "Sarvēśvara Govindā", meaning: "The omnipotent sovereign supreme ruler of all existence." },
-      { id: 98, telugu: "సర్వవ్యాపక గోవిందా", english: "Sarvavyāpaka Govindā", meaning: "All-pervading consciousness suffusing every atom of reality." },
-      { id: 99, telugu: "అఖిలాండకోటి గోవిందా", english: "Akhilāṇḍakōṭi Govindā", meaning: "The master of countless millions of galaxies and cosmic realms." },
-      { id: 100, telugu: "బ్రహ్మాండనాయక గోవిందా", english: "Brahmāṇḍanāyaka Govindā", meaning: "The supreme cosmic sovereign governing all creation." },
-      { id: 101, telugu: "అనాదిమధ్యాంత గోవిందా", english: "Anādimadhyānta Govindā", meaning: "The eternal essence without origin, middle, or dissolution." },
-      { id: 102, telugu: "సత్యస్వరూప గోవిందా", english: "Satyasvarūpa Govindā", meaning: "The embodiment of immutable, absolute cosmic truth." },
-      { id: 103, telugu: "శాంతమూర్తి గోవిందా", english: "Śāntamūrti Govindā", meaning: "The personification of transcendental stillness and profound peace." },
-      { id: 104, telugu: "ఆనందరూప గోవిందా", english: "Ānandarūpa Govindā", meaning: "The unconditioned ocean of infinite bliss and joy." },
-      { id: 105, telugu: "కల్కిరూప గోవిందా", english: "Kalkirūpa Govindā", meaning: "The fiery white steed savior who heralds the golden age." },
-      { id: 106, telugu: "కరుణామయ గోవిందా", english: "Karuṇāmaya Govindā", meaning: "Whose every glance radiates gentle, uplifting compassion." },
-      { id: 107, telugu: "గోవింద గోవింద గోవిందా", english: "Govinda Govinda Govindā", meaning: "Triple proclamation of devotion invoking His all-protecting grace." },
-      { id: 108, telugu: "శ్రీ వేంకటరమణ గోవిందా", english: "Śrī Veṅkaṭaramaṇa Govindā", meaning: "The beloved charmer of Tirumala Hills, our eternal home." }
+      { id: 1, telugu: "శ్రీనివాసా గోవిందా", english: "Śrīnivāsā Govindā", meaning: "Abode of Goddess Sri Lakshmi, bestower of eternal spiritual and material auspiciousness." },
+      { id: 2, telugu: "శ్రీ వేంకటేశా గోవిందా", english: "Śrī Veṅkaṭēśā Govindā", meaning: "Lord of Venkatadri who completely burns away all accumulated sins and karma." },
+      { id: 3, telugu: "భక్త వత్సల గోవిందా", english: "Bhakta Vatsala Govindā", meaning: "He who showers boundless motherly affection and protection upon His devotees." },
+      { id: 4, telugu: "భాగవతా ప్రియ గోవిందా", english: "Bhāgavatā Priya Govindā", meaning: "The supreme Lord who holds noble devotees and Bhagavatas closest to His heart." },
+      { id: 5, telugu: "నిత్య నిర్మల గోవిందా", english: "Nitya Nirmala Govindā", meaning: "The eternally pure, immaculate, and untainted Supreme Being." },
+      { id: 6, telugu: "నీలమేఘ శ్యామ గోవిందా", english: "Nīlamēgha Śyāma Govindā", meaning: "The divine Lord whose complexion is radiant like dark rain-bearing monsoon clouds." },
+      { id: 7, telugu: "గోవిందా హరి గోవిందా", english: "Govindā Hari Govindā", meaning: "The supreme remover of all sins and sorrows; eternal refuge of mankind." },
+      { id: 8, telugu: "గోకుల నందన గోవిందా", english: "Gōkula Nandana Govindā", meaning: "The beloved delight of Gokula and eternal protector of cows and all living beings." },
+      { id: 9, telugu: "పురాణ పురుషా గోవిందా", english: "Purāṇa Puruṣā Govindā", meaning: "The primeval ancient cosmic soul extolled throughout all the sacred Puranas." },
+      { id: 10, telugu: "పుండరీకాక్ష గోవిందా", english: "Puṇḍarīkākṣa Govindā", meaning: "The enchanting Lord with large, divine eyes like blooming white lotus petals." },
+      { id: 11, telugu: "నంద నందనా గోవిందా", english: "Nanda Nandanā Govindā", meaning: "The darling child and source of supreme bliss for King Nanda of Gokula." },
+      { id: 12, telugu: "నవనీత చోరా గోవిందా", english: "Navanīta Cōrā Govindā", meaning: "The playful thief of fresh butter and stealer of pure, surrendered hearts." },
+      { id: 13, telugu: "పశుపాలక శ్రీ గోవిందా", english: "Paśupālaka Śrī Govindā", meaning: "The divine protector of cattle and supreme shepherd caring for all cosmic souls." },
+      { id: 14, telugu: "పాప విమోచన గోవిందా", english: "Pāpa Vimōcana Govindā", meaning: "The compassionate redeemer who liberates surrendered devotees from all sins." },
+      { id: 15, telugu: "దుష్ట సంహార గోవిందా", english: "Duṣṭa Saṁhāra Govindā", meaning: "The invincible vanquisher of wicked forces, demons, and negative tendencies." },
+      { id: 16, telugu: "దురిత నివారణ గోవిందా", english: "Durita Nivāraṇa Govindā", meaning: "The divine protector who removes all hardships, afflictions, and anxieties." },
+      { id: 17, telugu: "శిష్ట పరిపాలక గోవిందా", english: "Śiṣṭa Paripālaka Govindā", meaning: "The constant protector and benevolent preserver of the noble and righteous." },
+      { id: 18, telugu: "కష్ట నివారణ గోవిందా", english: "Kaṣṭa Nivāraṇa Govindā", meaning: "The dispeller of worldly sorrows, grief, and life trials." },
+      { id: 19, telugu: "వజ్ర మకుటధర గోవిందా", english: "Vajra Makuṭadhara Govindā", meaning: "The sovereign King crowned with the dazzling, celestial diamond-studded crown." },
+      { id: 20, telugu: "వరాహ మూర్తీ గోవిందా", english: "Varāha Mūrtī Govindā", meaning: "The sacred Boar incarnation who lifted Mother Earth from the cosmic waters." },
+      { id: 21, telugu: "గోపీజన లోల గోవిందా", english: "Gōpījana Lōla Govindā", meaning: "The beloved charmer and joy of the devotional Gopis of Vrindavana." },
+      { id: 22, telugu: "గోవర్ధనోద్ధార గోవిందా", english: "Gōvardhanōddhāra Govindā", meaning: "He who lifted the Govardhana hill on His little finger to shelter His devotees." },
+      { id: 23, telugu: "దశరధ నందన గోవిందా", english: "Daśaratha Nandana Govindā", meaning: "The noble scion born as the virtuous son of King Dasharatha as Sri Rama." },
+      { id: 24, telugu: "దశముఖ మర్ధన గోవిందా", english: "Daśamukha Mardana Govindā", meaning: "The righteous conqueror who subdued and destroyed ten-headed tyrant Ravana." },
+      { id: 25, telugu: "పక్షి వాహనా గోవిందా", english: "Pakṣi Vāhanā Govindā", meaning: "The magnificent Lord who traverses the cosmos mounted on the golden-winged Garuda." },
+      { id: 26, telugu: "పాండవ ప్రియ గోవిందా", english: "Pāṇḍava Priya Govindā", meaning: "The dear companion, guide, and steadfast protector of the five Pandava brothers." },
+      { id: 27, telugu: "మత్స్య కూర్మ గోవిందా", english: "Matsya Kūrma Govindā", meaning: "The savior who manifested as Matsya the fish and Kurma the tortoise to protect creation." },
+      { id: 28, telugu: "మధు సూధనా హరి గోవిందా", english: "Madhu Sūdanā Hari Govindā", meaning: "The slayer of the demon Madhu, destroying ignorance and cosmic delusion." },
+      { id: 29, telugu: "వరాహ న్రుసింహ గోవిందా", english: "Varāha Nṛsiṁha Govindā", meaning: "The divine Boar and fearsome Man-Lion who appeared instantly to protect child Prahlada." },
+      { id: 30, telugu: "వామన భృగురామ గోవిందా", english: "Vāmana Bhṛgurāma Govindā", meaning: "The dwarf Brahmin Vamana who measured the cosmos, and warrior sage Parashurama." },
+      { id: 31, telugu: "బలరామానుజ గోవిందా", english: "Balarāmānuja Govindā", meaning: "The loving younger brother of mighty Balarama, embodiment of divine sweetness." },
+      { id: 32, telugu: "బౌద్ధ కల్కిధర గోవిందా", english: "Bauddha Kalkidhara Govindā", meaning: "The peaceful compassionate teacher and the fiery Kalki incarnation riding a white steed." },
+      { id: 33, telugu: "వేణు గాన ప్రియ గోవిందా", english: "Vēṇu Gāna Priya Govindā", meaning: "The enchanter of creation who plays divine melodies on His sacred celestial flute." },
+      { id: 34, telugu: "వేంకట రమణా గోవిందా", english: "Veṅkaṭa Ramaṇā Govindā", meaning: "The beloved Lord who sports delightfully on the Seven Hills of Tirumala." },
+      { id: 35, telugu: "సీతా నాయక గోవిందా", english: "Sītā Nāyaka Govindā", meaning: "The devoted consort and beloved protector of virtuous Mother Sita Devi." },
+      { id: 36, telugu: "శ్రితపరిపాలక గోవిందా", english: "Śritaparipālaka Govindā", meaning: "The faithful guardian of all surrendered devotees who take shelter under His lotus feet." },
+      { id: 37, telugu: "దరిద్రజన పోషక గోవిందా", english: "Daridrajana Pōṣaka Govindā", meaning: "The compassionate provider who fills the bowls and hearts of the poor and humble." },
+      { id: 38, telugu: "ధర్మ సంస్థాపక గోవిందా", english: "Dharma Saṁsthāpaka Govindā", meaning: "He who descends age after age to restore righteousness and cosmic order." },
+      { id: 39, telugu: "అనాథ రక్షక గోవిందా", english: "Anātha Rakṣaka Govindā", meaning: "The timeless refuge and guardian of the destitute, helpless, and shelterless." },
+      { id: 40, telugu: "ఆపధ్భాందవ గోవిందా", english: "Āpadbāndhava Govindā", meaning: "The ultimate friend and savior who rushes to protect in moments of acute distress." },
+      { id: 41, telugu: "శరణాగతవత్సల గోవిందా", english: "Śaraṇāgatavatsala Govindā", meaning: "He who showers boundless grace upon everyone who offers unconditional surrender." },
+      { id: 42, telugu: "కరుణా సాగర గోవిందా", english: "Karuṇā Sāgara Govindā", meaning: "The bottomless ocean of unconditional mercy and endless benevolence." },
+      { id: 43, telugu: "కమల దళాక్షా గోవిందా", english: "Kamala Daḷākṣā Govindā", meaning: "The Lord blessed with enchanting eyes soft and wide like lotus petals." },
+      { id: 44, telugu: "కామిత ఫలదాత గోవిందా", english: "Kāmita Phaladāta Govindā", meaning: "The wish-fulfilling deity who grants all noble desires and aspirations of devotees." },
+      { id: 45, telugu: "పాప వినాశక గోవిందా", english: "Pāpa Vināśaka Govindā", meaning: "The sacred purifier whose name and remembrance wash away every blemish of sin." },
+      { id: 46, telugu: "పాహి మురారే గోవిందా", english: "Pāhi Murārē Govindā", meaning: "O protector and conqueror of the demon Mura, save and guide us forever!" },
+      { id: 47, telugu: "శ్రీముద్రాంకిత గోవిందా", english: "Śrīmudrāṅkita Govindā", meaning: "Bearing the sacred holy seal of Sri Mahalakshmi upon His lotus palms." },
+      { id: 48, telugu: "శ్రీవత్సాంకిత గోవిందా", english: "Śrīvatsāṅkita Govindā", meaning: "Adorned with the sacred Srivatsa mark of eternal fortune upon His divine chest." },
+      { id: 49, telugu: "ధరణీ నాయక గోవిందా", english: "Dharaṇī Nāyaka Govindā", meaning: "The sovereign master, husband, and protector of Mother Earth." },
+      { id: 50, telugu: "దినకర తేజా గోవిందా", english: "Dinakara Tējā Govindā", meaning: "Resplendent with the radiant luminosity and brilliance of a thousand suns." },
+      { id: 51, telugu: "పద్మావతీ ప్రియ గోవిందా", english: "Padmāvatī Priya Govindā", meaning: "The beloved divine consort of Goddess Padmavathi residing at Tiruchanur." },
+      { id: 52, telugu: "ప్రసన్న మూర్తే గోవిందా", english: "Prasanna Mūrtē Govindā", meaning: "The serene embodiment of tranquil peace, smiling benevolence, and inner joy." },
+      { id: 53, telugu: "అభయ హస్త గోవిందా", english: "Abhaya Hasta Govindā", meaning: "Whose raised hand of protection dispels all fears of mortal existence." },
+      { id: 54, telugu: "అక్షయ వరదా గోవిందా", english: "Akṣaya Varadā Govindā", meaning: "The inexhaustible fountain bestowing endless boons and spiritual wealth." },
+      { id: 55, telugu: "శంఖ చక్రధర గోవిందా", english: "Śaṅkha Cakradhara Govindā", meaning: "Wielder of the sacred Panchajanya conch and invincible Sudarshana discus." },
+      { id: 56, telugu: "సారంగ గదాధర గోవిందా", english: "Śārṅga Gadādhara Govindā", meaning: "Master of the celestial bow Sharnga and the heavy golden mace Kaumodaki." },
+      { id: 57, telugu: "విరాజ తీర్థ గోవిందా", english: "Virāja Tīrtha Govindā", meaning: "The presiding deity of the heavenly sacred river Viraja purifying the cosmos." },
+      { id: 58, telugu: "విరోధి మర్ధన గోవిందా", english: "Virōdhi Mardana Govindā", meaning: "The vanquisher of inner enemies: anger, pride, jealousy, and delusion." },
+      { id: 59, telugu: "సాలగ్రామ హర గోవిందా", english: "Sālagrāma Hara Govindā", meaning: "Decorated with the holy garland of sacred Salagrama stones around His neck." },
+      { id: 60, telugu: "సహస్ర నామ గోవిందా", english: "Sahasra Nāma Govindā", meaning: "Glorified and extolled through a thousand transcendental names and virtues." },
+      { id: 61, telugu: "లక్ష్మీ వల్లభ గోవిందా", english: "Lakṣmī Vallabha Govindā", meaning: "The eternal cherished husband of Goddess Mahalakshmi, goddess of wealth." },
+      { id: 62, telugu: "లక్ష్మణాగ్రజ గోవిందా", english: "Lakṣmaṇāgraja Govindā", meaning: "The revered elder brother served with unwavering devotion by Lakshmana." },
+      { id: 63, telugu: "కస్తూరి తిలక గోవిందా", english: "Kastūrī Tilaka Govindā", meaning: "Whose forehead shines brilliantly with the fragrant sacred musk tilaka." },
+      { id: 64, telugu: "కాంచనాంబరధర గోవిందా", english: "Kāñcanāmbaradhara Govindā", meaning: "Draped in lustrous yellow silks woven with gleaming threads of molten gold." },
+      { id: 65, telugu: "గరుడ వాహనా గోవిందా", english: "Garuḍa Vāhanā Govindā", meaning: "He who glides across the cosmic firmament riding gracefully on Garuda." },
+      { id: 66, telugu: "గజరాజ రక్షక గోవిందా", english: "Gajarāja Rakṣaka Govindā", meaning: "The savior who answered Gajendra the elephant king’s desperate cry for protection." },
+      { id: 67, telugu: "వానర సేవిత గోవిందా", english: "Vānara Sēvita Govindā", meaning: "Adored and served with unmatched loyalty by the Vanara army led by Hanuman." },
+      { id: 68, telugu: "వారథి బంధన గోవిందా", english: "Vārathi Bandhana Govindā", meaning: "The supreme architect who caused the floating bridge of stones to span the ocean." },
+      { id: 69, telugu: "ఏడు కొండల వాడా గోవిందా", english: "Ēḍu Koṇḍala Vāḍā Govindā", meaning: "The beloved Lord dwelling on the sacred Seven Hills of Tirumala." },
+      { id: 70, telugu: "ఏకత్వ రూపా గోవిందా", english: "Ēkatva Rūpā Govindā", meaning: "The non-dual supreme absolute reality uniting all manifestations of existence." },
+      { id: 71, telugu: "రామ క్రిష్ణా గోవిందా", english: "Rāma Kṛṣṇā Govindā", meaning: "The one Supreme Reality who appeared as virtuous Rama and playful Krishna." },
+      { id: 72, telugu: "రఘుకుల నందన గోవిందా", english: "Raghukula Nandana Govindā", meaning: "The crest jewel ornament and prince born into the noble solar dynasty of Raghu." },
+      { id: 73, telugu: "ప్రత్యక్ష దేవ గోవిందా", english: "Pratyakṣa Dēva Govindā", meaning: "The living deity directly visible and accessible to mankind in Kaliyuga." },
+      { id: 74, telugu: "పరమ దయాకర గోవిందా", english: "Parama Dayākara Govindā", meaning: "The most profoundly merciful Lord who forgives all mistakes and showers grace." },
+      { id: 75, telugu: "వజ్ర మకుటదర గోవిందా", english: "Vajra Makuṭadhara Govindā", meaning: "Adorned with the magnificent crown sparkling with peerless diamonds." },
+      { id: 76, telugu: "వైజయంతి మాల గోవిందా", english: "Vaijayantī Māla Govindā", meaning: "Wearing the cosmic flower garland Vaijayanti woven with eternal blooms." },
+      { id: 77, telugu: "వడ్డీ కాసుల వాడా గోవిందా", english: "Vaḍḍī Kāsula Vāḍā Govindā", meaning: "The merciful Lord of Tirumala who collects coins to fulfill the debt to Kubera." },
+      { id: 78, telugu: "వాసుదేవ తనయా గోవిందా", english: "Vāsudēva Tanayā Govindā", meaning: "The beloved son of Vasudeva and Devaki, the all-pervading omnipresent divinity." },
+      { id: 79, telugu: "బిల్వపత్రార్చిత గోవిందా", english: "Bilvapatrārcita Govindā", meaning: "Reverently worshipped with fragrant Bilva leaves showing unity with Lord Shiva." },
+      { id: 80, telugu: "భిక్షుక సంస్తుత గోవిందా", english: "Bhikṣuka Saṁstuta Govindā", meaning: "Praised with blissful songs by wandering saints, ascetics, and humble beggars." },
+      { id: 81, telugu: "స్త్రీ పుం రూపా గోవిందా", english: "Strī Puṁ Rūpā Govindā", meaning: "The all-embracing divine presence manifesting as both female and male aspects of God." },
+      { id: 82, telugu: "శివకేశవ మూర్తి గోవిందా", english: "Śivakēśava Mūrti Govindā", meaning: "The embodiment of oneness harmonizing Hari and Hara into a singular divine truth." },
+      { id: 83, telugu: "బ్రహ్మానంద రూపా గోవిందా", english: "Brahmānanda Rūpā Govindā", meaning: "The personification of transcendental bliss experienced in supreme liberation." },
+      { id: 84, telugu: "భక్త తారకా గోవిందా", english: "Bhakta Tārakā Govindā", meaning: "The supreme ferryman who carries devotees safely across the turbulent ocean of birth and death." },
+      { id: 85, telugu: "నిత్య కళ్యాణ గోవిందా", english: "Nitya Kalyāṇa Govindā", meaning: "The eternal bridegroom celebrated each day with joyous celestial Kalyanotsavam." },
+      { id: 86, telugu: "నీరజ నాభా గోవిందా", english: "Nīraja Nābhā Govindā", meaning: "From whose sacred lotus-navel blooms the entire cosmic lotus of creation." },
+      { id: 87, telugu: "హతి రామ ప్రియ గోవిందా", english: "Hati Rāma Priya Govindā", meaning: "The benevolent deity who visited and played dice with His pure devotee Hathiram Baba." },
+      { id: 88, telugu: "హరి సర్వోత్తమ గోవిందా", english: "Hari Sarvōttama Govindā", meaning: "The supreme reality standing transcendent above all celestials and cosmic forces." },
+      { id: 89, telugu: "జనార్ధన మూర్తి గోవిందా", english: "Janārdhana Mūrti Govindā", meaning: "The benefactor who frees mortals from the pangs of earthly distress." },
+      { id: 90, telugu: "జగత్ సాక్షి రూపా గోవిందా", english: "Jagat Sākṣī Rūpā Govindā", meaning: "The omnipresent silent witness of all thoughts, deeds, and events throughout the cosmos." },
+      { id: 91, telugu: "అభిషేక ప్రియ గోవిందా", english: "Abhiṣēka Priya Govindā", meaning: "Delighted by the fragrant herbal and sacred holy water ablutions on Fridays." },
+      { id: 92, telugu: "అభన్నిరాసాద గోవిందా", english: "Āpadnivāraka Govindā", meaning: "The supreme destroyer of all dangers, misfortunes, and cosmic adversities." },
+      { id: 93, telugu: "నిత్య శుభాత గోవిందా", english: "Nitya Śubhadāta Govindā", meaning: "The perpetual bestower of auspiciousness, health, prosperity, and spiritual joy." },
+      { id: 94, telugu: "నిఖిల లోకేశా గోవిందా", english: "Nikhila Lōkēśā Govindā", meaning: "The supreme emperor governing all fourteen cosmic worlds with wisdom and grace." },
+      { id: 95, telugu: "ఆనంద రూపా గోవిందా", english: "Ānanda Rūpā Govindā", meaning: "The divine embodiment of pure, unconditioned, infinite transcendent joy." },
+      { id: 96, telugu: "అధ్యంత రహిత గోవిందా", english: "Ādyanta Rahita Govindā", meaning: "The eternal timeless divinity without beginning, without middle, and without end." },
+      { id: 97, telugu: "ఇహపర దాయక గోవిందా", english: "Ihapara Dāyaka Govindā", meaning: "Bestower of righteous prosperity in this life and supreme liberation in the hereafter." },
+      { id: 98, telugu: "ఇపరాజ రక్షక గోవిందా", english: "Ibharāja Rakṣaka Govindā", meaning: "The swift savior who severed the crocodile’s grip to save Gajendra the elephant king." },
+      { id: 99, telugu: "పద్మ దలక్ష గోవిందా", english: "Padma Daḷākṣa Govindā", meaning: "Whose wide, gentle lotus-petal eyes radiate infinite compassion upon all souls." },
+      { id: 100, telugu: "పద్మనాభా గోవిందా", english: "Padmanābhā Govindā", meaning: "The cosmic protector cradling Creator Brahma upon the lotus born of His navel." },
+      { id: 101, telugu: "తిరుమల నివాసా గోవిందా", english: "Tirumala Nivāsā Govindā", meaning: "He who graciously chose the fragrant Seven Hills of Tirumala as His eternal earthly home." },
+      { id: 102, telugu: "తులసీ వనమాల గోవిందా", english: "Tulasī Vanamāla Govindā", meaning: "Adorned with sweet-scented cosmic garlands of freshly plucked sacred Tulasi leaves." },
+      { id: 103, telugu: "శేష సాయి గోవిందా", english: "Śēṣa Sāyī Govindā", meaning: "Reclining peacefully in cosmic meditation upon the divine serpent couch of Adisesha." },
+      { id: 104, telugu: "శేషాద్రి నిలయ గోవిందా", english: "Śēṣādri Nilaya Govindā", meaning: "The Lord who rests upon the Sheshadri peak overlooking the universe with grace." },
+      { id: 105, telugu: "శ్రీ శ్రీనివాసా గోవిందా", english: "Śrī Śrīnivāsā Govindā", meaning: "The eternal dwelling of Goddess Sri Lakshmi, radiant emperor of the Seven Hills." },
+      { id: 106, telugu: "శ్రీ వేంకటేశా గోవిందా", english: "Śrī Veṅkaṭēśā Govindā", meaning: "Sri Venkateswara, the eternal destroyer of karmic suffering and supreme refuge." },
+      { id: 107, telugu: "గోవిందా హరి గోవిందా", english: "Govindā Hari Govindā", meaning: "Supreme protector and Lord Govinda, our eternal savior and redeemer of souls." },
+      { id: 108, telugu: "గోకుల నందన గోవిందా", english: "Gōkula Nandana Govindā", meaning: "The beloved charmer of Gokula, supreme lover of truth, and eternal joy of devotees." },
     ];
 
     // State Variables
@@ -728,6 +731,77 @@
     const drawerListContainer = document.getElementById('drawerListContainer');
     const searchNamaInput = document.getElementById('searchNamaInput');
 
+    // Language & Localized Elements
+    const elAppSubtitle = document.getElementById('appSubtitle');
+    const elDirectoryBtnText = document.getElementById('directoryBtnText');
+    const elMetricNamaLabel = document.getElementById('metricNamaLabel');
+    const elMetricMalaLabel = document.getElementById('metricMalaLabel');
+    const elMetricTotalLabel = document.getElementById('metricTotalLabel');
+    const elResponseChorus = document.getElementById('responseChorus');
+    const elLabelMeaning = document.getElementById('labelMeaning');
+    const elPrevNamaBtn = document.getElementById('prevNamaBtn');
+    const elNextNamaBtn = document.getElementById('nextNamaBtn');
+    const elChantBeadMainText = document.getElementById('chantBeadMainText');
+    const elChantBeadSubText = document.getElementById('chantBeadSubText');
+    const elChantHintText = document.getElementById('chantHintText');
+    const elResetMalaText = document.getElementById('resetMalaText');
+    const elDrawerTitle = document.getElementById('drawerTitle');
+    const elDrawerFooterText = document.getElementById('drawerFooterText');
+
+    // Complete Localization Strings Dictionary
+    const UI_STRINGS = {
+      te: {
+        appSubtitle: "తిరుమల శ్రీ వేంకటేశ్వర",
+        directoryBtn: "సూచి",
+        modeJapa: "జప మాల (108)",
+        modeParayanam: "పారాయణం",
+        metricOrder: "నామ క్రమం",
+        metricRounds: "పూర్తి మాలలు",
+        metricTotal: "మొత్తం జపం",
+        chorus: "గోవిందా హరి గోవిందా",
+        meaningLabel: "తాత్పర్యం / Meaning",
+        autoPlay: "స్వయంచాలక (Auto)",
+        autoPause: "విరామం (Pause)",
+        prevTitle: "మునుపటి నామం (Previous)",
+        nextTitle: "తరువాతి నామం (Next)",
+        chantCenter: "గోవిందా!",
+        chantSub: "స్పర్శించి జపించండి",
+        chantHint: "🔔 ట్యాప్ చేసి గోవింద నామం పఠించండి",
+        resetMala: "మాల రీసెట్ (Reset)",
+        drawerTitle: "108 శ్రీ గోవింద నామావళి",
+        searchPlaceholder: "నామం శోధించండి (Search Nama / English)...",
+        drawerFooter: "శ్రీ వేంకటేశ్వర చరణౌ శరణం ప్రపద్యే",
+        shankhTitle: "శంఖ ధ్వని (Resound Shankham)",
+        bellMute: "గంట శబ్దం ఆపు (Mute Bell Audio)",
+        bellUnmute: "గంట శబ్దం ఆన్ చేయి (Unmute Bell Audio)"
+      },
+      en: {
+        appSubtitle: "Tirumala Sri Venkateswara",
+        directoryBtn: "Index",
+        modeJapa: "Japa Mala (108)",
+        modeParayanam: "Parayanam",
+        metricOrder: "Nama Order",
+        metricRounds: "Completed Malas",
+        metricTotal: "Total Chants",
+        chorus: "Govindā Hari Govindā",
+        meaningLabel: "Meaning / తాత్పర్యం",
+        autoPlay: "Auto Chant",
+        autoPause: "Pause",
+        prevTitle: "Previous Nama",
+        nextTitle: "Next Nama",
+        chantCenter: "Govinda!",
+        chantSub: "Tap to Chant",
+        chantHint: "🔔 Tap to chant Govinda Nama",
+        resetMala: "Reset Mala",
+        drawerTitle: "108 Sri Govinda Namavali",
+        searchPlaceholder: "Search Nama (Telugu / English)...",
+        drawerFooter: "Śrī Veṅkaṭēśvara Caraṇau Śaraṇaṁ Prapadyē",
+        shankhTitle: "Resound Sacred Shankham",
+        bellMute: "Mute Bell Audio",
+        bellUnmute: "Unmute Bell Audio"
+      }
+    };
+
     // Update Display based on Current Index
     function renderCurrentNama() {
       const data = GOVINDA_NAMALU[currentIndex];
@@ -807,11 +881,12 @@
     // Auto Chanting Interval Controller
     function toggleAutoChant() {
       isAutoPlay = !isAutoPlay;
+      const s = UI_STRINGS[currentLanguage] || UI_STRINGS.te;
       if (isAutoPlay) {
         elAutoBtn.classList.remove('bg-temple-maroon');
         elAutoBtn.classList.add('bg-temple-gold', 'text-temple-deepWine', 'font-bold');
         elAutoIcon.textContent = '⏸';
-        elAutoText.textContent = 'విరామం (Pause)';
+        elAutoText.textContent = s.autoPause;
         autoInterval = setInterval(() => {
           handleChant();
         }, 2200);
@@ -820,7 +895,7 @@
         elAutoBtn.classList.remove('bg-temple-gold', 'text-temple-deepWine', 'font-bold');
         elAutoBtn.classList.add('bg-temple-maroon', 'text-temple-goldLight');
         elAutoIcon.textContent = '▶';
-        elAutoText.textContent = 'స్వయంచాలక (Auto)';
+        elAutoText.textContent = s.autoPlay;
       }
     }
 
@@ -840,8 +915,8 @@
           const row = document.createElement('div');
           const isCurrent = index === currentIndex;
           row.className = `p-3 rounded-xl border transition-all flex items-center justify-between cursor-pointer ${isCurrent
-              ? 'bg-temple-gold/25 border-temple-gold text-white shadow-md'
-              : 'bg-black/30 border-temple-gold/15 text-stone-300 hover:bg-temple-gold/10'
+            ? 'bg-temple-gold/25 border-temple-gold text-white shadow-md'
+            : 'bg-black/30 border-temple-gold/15 text-stone-300 hover:bg-temple-gold/10'
             }`;
 
           row.innerHTML = `
@@ -888,23 +963,79 @@
       renderCurrentNama();
     });
 
-    // Language Toggles
+    // Language Toggles & Dynamic UI Translation
     const langTeluguBtn = document.getElementById('langTelugu');
     const langEnglishBtn = document.getElementById('langEnglish');
     const teluguBlock = document.getElementById('displayTeluguBlock');
     const englishBlock = document.getElementById('displayEnglishBlock');
 
+    function applyLanguage(lang) {
+      currentLanguage = lang;
+      const s = UI_STRINGS[lang] || UI_STRINGS.te;
+
+      // Update Language Toggle Buttons highlight
+      if (lang === 'te') {
+        langTeluguBtn.className = "text-[11px] font-bold text-temple-gold bg-temple-gold/20 px-2 py-0.5 rounded transition-all";
+        langEnglishBtn.className = "text-[11px] text-stone-300 hover:text-white px-2 py-0.5 rounded transition-all";
+      } else {
+        langEnglishBtn.className = "text-[11px] font-bold text-temple-gold bg-temple-gold/20 px-2 py-0.5 rounded transition-all";
+        langTeluguBtn.className = "text-[11px] text-stone-300 hover:text-white px-2 py-0.5 rounded transition-all";
+      }
+
+      // App Subtitle & Directory button
+      if (elAppSubtitle) elAppSubtitle.textContent = s.appSubtitle;
+      if (elDirectoryBtnText) elDirectoryBtnText.textContent = s.directoryBtn;
+
+      // Mode switch buttons text
+      if (modeJapaBtn) modeJapaBtn.textContent = s.modeJapa;
+      if (modeParayanamBtn) modeParayanamBtn.textContent = s.modeParayanam;
+
+      // Metric headers
+      if (elMetricNamaLabel) elMetricNamaLabel.textContent = s.metricOrder;
+      if (elMetricMalaLabel) elMetricMalaLabel.textContent = s.metricRounds;
+      if (elMetricTotalLabel) elMetricTotalLabel.textContent = s.metricTotal;
+
+      // CORE BANNER: Kept same in both Telugu and English! Both Telugu and English Nama appear!
+      if (teluguBlock) teluguBlock.style.display = 'flex';
+      if (englishBlock) englishBlock.style.display = 'flex';
+      if (elResponseChorus) elResponseChorus.textContent = s.chorus;
+      if (elLabelMeaning) elLabelMeaning.textContent = s.meaningLabel;
+
+      // Navigation button tooltips
+      if (elPrevNamaBtn) elPrevNamaBtn.title = s.prevTitle;
+      if (elNextNamaBtn) elNextNamaBtn.title = s.nextTitle;
+
+      // Auto play text
+      if (elAutoText) {
+        elAutoText.textContent = isAutoPlay ? s.autoPause : s.autoPlay;
+      }
+
+      // Central Chant Button & Hint
+      if (elChantBeadMainText) elChantBeadMainText.textContent = s.chantCenter;
+      if (elChantBeadSubText) elChantBeadSubText.textContent = s.chantSub;
+      if (elChantHintText) elChantHintText.innerHTML = `<span>${s.chantHint}</span>`;
+
+      // Footer
+      if (elResetMalaText) elResetMalaText.textContent = s.resetMala;
+
+      // Drawer Directory
+      if (elDrawerTitle) elDrawerTitle.textContent = s.drawerTitle;
+      if (searchNamaInput) searchNamaInput.placeholder = s.searchPlaceholder;
+      if (elDrawerFooterText) elDrawerFooterText.textContent = s.drawerFooter;
+
+      // Audio buttons tooltips
+      if (elShankhBtn) elShankhBtn.title = s.shankhTitle;
+      updateBellButton();
+    }
+
     langTeluguBtn.addEventListener('click', () => {
-      langTeluguBtn.classList.add('text-temple-gold', 'font-bold');
-      langEnglishBtn.classList.remove('text-temple-gold', 'font-bold');
-      langEnglishBtn.classList.add('text-stone-300');
-      teluguBlock.style.display = 'flex';
+      applyLanguage('te');
+      triggerTactilePulse(false);
     });
 
     langEnglishBtn.addEventListener('click', () => {
-      langEnglishBtn.classList.add('text-temple-gold', 'font-bold');
-      langTeluguBtn.classList.remove('text-temple-gold', 'font-bold');
-      langTeluguBtn.classList.add('text-stone-300');
+      applyLanguage('en');
+      triggerTactilePulse(false);
     });
 
     // Tactile Vibration Feedback for mobile devices
@@ -924,9 +1055,10 @@
 
     function updateBellButton() {
       if (!elBellBtn) return;
+      const s = UI_STRINGS[currentLanguage] || UI_STRINGS.te;
       if (isBellMuted) {
-        elBellBtn.title = "గంట శబ్దం ఆన్ చేయి (Unmute Bell Audio)";
-        elBellBtn.setAttribute('aria-label', 'Unmute Bell Audio');
+        elBellBtn.title = s.bellUnmute;
+        elBellBtn.setAttribute('aria-label', s.bellUnmute);
         elBellBtn.className = "w-8 h-8 rounded-full bg-stone-900/90 border border-red-500/50 flex items-center justify-center text-stone-400 hover:text-stone-200 active:scale-90 transition-all shadow-md relative";
         elBellBtn.innerHTML = `
           <svg class="w-4 h-4 text-stone-400 opacity-60" fill="currentColor" viewBox="0 0 24 24">
@@ -937,8 +1069,8 @@
           </span>
         `;
       } else {
-        elBellBtn.title = "గంట శబ్దం ఆపు (Mute Bell Audio)";
-        elBellBtn.setAttribute('aria-label', 'Mute Bell Audio');
+        elBellBtn.title = s.bellMute;
+        elBellBtn.setAttribute('aria-label', s.bellMute);
         elBellBtn.className = "w-8 h-8 rounded-full bg-temple-cardBg/90 border border-temple-gold/40 flex items-center justify-center text-temple-gold hover:text-white active:scale-90 transition-all shadow-md";
         elBellBtn.innerHTML = `
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -1021,7 +1153,7 @@
     // Initialize display on load
     window.addEventListener('DOMContentLoaded', () => {
       renderCurrentNama();
-      updateBellButton();
+      applyLanguage(currentLanguage);
     });
   </script>
 </body>
