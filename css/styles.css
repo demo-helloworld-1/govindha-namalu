@@ -1,0 +1,49 @@
+/* Custom scrollbar and ambient styles */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #250207;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b78103;
+  border-radius: 4px;
+}
+
+body {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #120104;
+}
+
+/* Gold Foil Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #ffe599 0%, #f5b041 50%, #d48b0c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #fff2cc 0%, #ffd97d 70%, #d49a24 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to bottom right, #f5b041, #7c4a03, #f5b041) 1;
+}
+
+.sacred-shadow {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(245, 176, 65, 0.15);
+}
+
+.chant-ring {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transition: stroke-dashoffset 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
